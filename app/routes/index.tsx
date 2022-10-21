@@ -1,8 +1,18 @@
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+    <div className="container prose mx-auto">
       <h1>Hello 👋</h1>
-      <p>I'm Ross Matthews, a Senior Frontend Developer living and working remotely in London, UK. Welcome to my personal site.</p>
+      <p>I'm Ross Matthews, a Senior Frontend Developer living and working remotely in London, UK.</p>
+      <p>
+        I currently work at Rated People. Welcome to my personal site. You can find me on{' '}
+        <a href="https://www.linkedin.com/in/rossmatthewsdev" target="_blank" rel="noreferrer noopener">
+          LinkedIn
+        </a>{' '}
+        and{' '}
+        <a href="https://twitter.com/Ross_Matthews" target="_blank" rel="noreferrer noopener">
+          Twitter
+        </a>
+      </p>
       {/* <ul>
         <li>
           <a
