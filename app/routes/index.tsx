@@ -1,8 +1,9 @@
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
+      <h1>Hello 👋</h1>
+      <p>I'm Ross Matthews, a Senior Frontend Developer living and working remotely in London, UK. Welcome to my personal site.</p>
+      {/* <ul>
         <li>
           <a
             target="_blank"
@@ -26,7 +27,7 @@ export default function Index() {
             Remix Docs
           </a>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 }
