@@ -1,6 +1,6 @@
 export default function Index() {
   return (
-    <div className="container prose mx-auto">
+    <div className="container prose mx-auto pt-8">
       <h1>Hello 👋</h1>
       <p>I'm Ross Matthews, a Senior Frontend Developer living and working remotely in London, UK.</p>
       <p>
