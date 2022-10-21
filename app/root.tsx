@@ -6,6 +6,7 @@ import styles from './styles/app.css';
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
   title: 'Ross Matthews Personal Site',
+  description: `I'm Ross Matthews, a Senior Frontend Developer living and working remotely in London, UK.`,
   viewport: 'width=device-width,initial-scale=1'
 });
 

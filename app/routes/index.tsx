@@ -10,7 +10,7 @@ export default function Index() {
         </a>{' '}
         and{' '}
         <a href="https://twitter.com/Ross_Matthews" target="_blank" rel="noreferrer noopener">
-          Twitter
+          Twitter.
         </a>
       </p>
       {/* <ul>
