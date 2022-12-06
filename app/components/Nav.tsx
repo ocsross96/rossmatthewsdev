@@ -8,10 +8,14 @@ function classNames(...classes) {
 }
 
 export default function Nav() {
-  const navClassName =
+  const desktopNavItemClassName =
     'inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700';
-  const activeNavClassName =
+  const desktopNavItemActiveClassName =
     'inline-flex items-center border-b-2 border-teal-500 px-1 pt-1 text-sm font-medium text-gray-900';
+  const mobileNavItemActiveClassName =
+    'block border-l-4 border-teal-500 bg-teal-50 py-2 pl-3 pr-4 text-base font-medium text-teal-700';
+  const mobileNavItemClassName =
+    'block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-teal-500 hover:bg-teal-50 hover:text-teal-700 ';
 
   return (
     <Disclosure as="nav" className="relative sticky z-10 bg-white shadow">
@@ -24,13 +28,22 @@ export default function Nav() {
                   <img className="block h-[2.25rem] w-auto lg:hidden" src={Logo} alt="Ross Matthews Logo" />
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                  <NavLink to="/" className={({ isActive }) => (isActive ? activeNavClassName : navClassName)}>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) => (isActive ? desktopNavItemActiveClassName : desktopNavItemClassName)}
+                  >
                     Home
                   </NavLink>
-                  <NavLink to="/resume" className={({ isActive }) => (isActive ? activeNavClassName : navClassName)}>
+                  <NavLink
+                    to="/resume"
+                    className={({ isActive }) => (isActive ? desktopNavItemActiveClassName : desktopNavItemClassName)}
+                  >
                     Resume
                   </NavLink>
-                  <NavLink to="/blog" className={({ isActive }) => (isActive ? activeNavClassName : navClassName)}>
+                  <NavLink
+                    to="/blog"
+                    className={({ isActive }) => (isActive ? desktopNavItemActiveClassName : desktopNavItemClassName)}
+                  >
                     Blog
                   </NavLink>
                 </div>
@@ -103,7 +116,7 @@ export default function Nav() {
             */}
               <div className="-mr-2 flex items-center sm:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -121,21 +134,21 @@ export default function Nav() {
               <Disclosure.Button
                 as={NavLink}
                 to="/"
-                className="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
+                className={mobileNavItemActiveClassName)}
               >
                 Home
               </Disclosure.Button>
               <Disclosure.Button
                 as={NavLink}
                 to="/resume"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                className={({ isActive }) => (isActive ? mobileNavItemActiveClassName : mobileNavItemClassName)}
               >
                 Resume
               </Disclosure.Button>
               <Disclosure.Button
                 as={NavLink}
                 to="/blog"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                className={({ isActive }) => (isActive ? mobileNavItemActiveClassName : mobileNavItemClassName)}
               >
                 Blog
               </Disclosure.Button>
