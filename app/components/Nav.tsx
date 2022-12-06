@@ -1,7 +1,7 @@
-import { Fragment } from 'react';
+import { NavLink } from '@remix-run/react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { NavLink } from '@remix-run/react';
+import Logo from '../../public/rossmatthewsdev/images/logo.svg';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -21,16 +21,7 @@ export default function Nav() {
             <div className="flex h-16 justify-between">
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
-                  />
-                  <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
-                  />
+                  <img className="block h-[2.25rem] w-auto lg:hidden" src={Logo} alt="Ross Matthews Logo" />
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   <NavLink to="/" className={({ isActive }) => (isActive ? activeNavClassName : navClassName)}>

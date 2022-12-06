@@ -1325,6 +1325,14 @@ video {
   height: 100%;
 }
 
+.h-\[2\.5rem\] {
+  height: 2.5rem;
+}
+
+.h-\[2\.25rem\] {
+  height: 2.25rem;
+}
+
 .min-h-\[100vh\] {
   min-height: 100vh;
 }
