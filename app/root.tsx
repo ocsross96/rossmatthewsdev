@@ -1,12 +1,14 @@
 import type { MetaFunction } from '@remix-run/cloudflare';
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
+import Nav from '~/components/Nav';
+import Footer from '~/components/Footer';
 
 import styles from './styles/app.css';
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
   title: 'Ross Matthews Personal Site',
-  description: `I'm Ross Matthews, a Senior Frontend Developer living and working remotely in London, UK.`,
+  description: `Personal site of Ross Matthews, a Senior Frontend Developer living and working remotely in London, UK.`,
   viewport: 'width=device-width,initial-scale=1'
 });
 
@@ -98,8 +100,18 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="flex min-h-[100vh] flex-col bg-zinc-50">
+        <Nav />
+
+        {/* <div className="fixed inset-0 top-16 z-0 flex justify-center sm:px-8">
+          <div className="flex w-full max-w-3xl lg:px-8">
+            <div className="w-full bg-white shadow-md ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
+          </div>
+        </div> */}
+
         <Outlet />
+        <Footer />
+
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
